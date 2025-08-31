@@ -1,0 +1,61 @@
+@use 'variables' as *;
+@use 'header';
+@use 'footer';
+@use 'home';
+@use 'sobremi';
+@use 'recetarios';
+@use 'testimonios';
+@use 'contacto';
+
+.boton:hover { animation: pulse .8s; }
+
+.social-icon:hover {
+    animation-name: bounce;
+    animation-duration: .8s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+
+@media (max-width: 650px) {
+/* Centrar textos y bloques */
+    main, section, footer {
+        text-align: center;
+    }
+
+/* Imágenes centradas */
+    section img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    }
+
+/* Botones centrados */
+    .boton, .btn {
+    display: block;
+    margin: 1rem auto;
+    }
+
+/* input + botón lupa en una fila */
+    .navbar form[role="search"] {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    }
+
+    .navbar form[role="search"] .form-control {
+    width: 70vw;
+    }
+
+main,
+    .personas,
+    .testimonios,
+    .descripcion-flor,
+    .bloque-1, .bloque-2, .bloque-3 {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+}
+

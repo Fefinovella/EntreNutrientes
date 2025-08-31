@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+.descripcion-flor {
+    max-width: 90vw;
+    padding: 5vh 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.descripcion-flor img {
+    width: 50vh;
+    height: auto;
+    border-radius: 1vw;
+    align-self: center;
+    justify-self: center;
+}
+
+.descripcion-flor p {
+    padding: 1rem;
+}
+
+/* CTA */
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 70vw;
+    margin: 0 auto;
+    text-align: justify;
+    text-align-last: center;
+    padding: 10px 12px 5px 12px;
+    border: 2px solid $color-principal;
+    border-radius: 9px;
+    box-shadow: 0px 1px 2px 0px;
+}
+
+
+@media (max-width: 650px) {
+.descripcion-flor{
+    grid-template-columns: 1fr; 
+    justify-items: center;
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+.descripcion-flor img { grid-row: 1; } 
+.descripcion-flor .texto-bloque { 
+    grid-row: 2; 
+}
+
+.descripcion-flor .texto-bloque h3.subtitulo {
+    text-align: center !important;
+}
+
+}

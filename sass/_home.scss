@@ -1,0 +1,138 @@
+@use 'variables' as *;
+
+/* Slogan de apertura */
+.slogan-de-apertura {
+    position: relative;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slogan-de-apertura img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    grid-area: 1/1;
+    filter: opacity(50%);
+}
+
+.slogan-de-apertura h2 {
+    grid-area: 1/1;
+    font-weight: bold;
+    text-align: center;
+    font-size: 5vw;
+    padding: 1rem;
+    color: $color-titulo;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Main y bloques */
+main {
+    margin-inline: auto;
+    
+    max-width: 90vw;
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    text-align-last: center;
+}
+
+main section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+section img {
+    width: 50vh;
+    height: auto;
+    border-radius: 1vw;
+    align-self: center;
+    justify-self: center;
+}
+
+.bloque-1, .bloque-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.texto-bloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.bloque-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.bloque-2 ul {
+    order: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bloque-2 li {
+    font-weight: bold;
+    color: $color-principal;
+    margin-top: 1.5vh;
+    font-size: larger;
+}
+
+.bloque-2 img {
+    order: 2;
+}
+
+/* Botones */
+.boton {
+    display: block;
+    margin: 20px auto;
+    padding: 2px 35px;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    background-color: $color-boton-bg;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 0px;
+    color: $color-principal;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: $color-boton-hover;
+    text-decoration: none;
+}
+
+main a {
+    text-decoration: none;
+    color: $color-principal;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 650px) {
+
+main section,
+    .bloque-1, .bloque-2, .bloque-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+}
+
+.bloque-1 img, .bloque-2 img, .bloque-3 img {
+    grid-row: 1;   
+}
+
+.bloque-1 .texto-bloque, .bloque-2 ul, .bloque-3 .texto-bloque {
+    grid-row: 2; 
+}
+}

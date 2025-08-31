@@ -1,0 +1,119 @@
+@use 'variables' as *;
+
+.productos {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 5vh 5vw;
+    display: grid;
+    flex-direction: column;
+    text-align: justify;
+    text-align-last: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.productos-carrito {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+.contenedor-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    min-height: 520px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+    margin: 3rem;
+}
+
+.contenedor-3 img {
+    padding: 0 1.5rem;
+}
+
+.productos img {
+    width: 50vh;
+    height: auto;
+    border-radius: 1vw;
+    align-self: center;
+    justify-self: center;
+}
+
+.link-producto {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.link-producto:hover .titulo-producto { text-decoration: underline; }
+
+
+@media (hover: hover) and (pointer: fine) {
+    .contenedor-2 {
+    perspective: 900px;
+    } 
+    .link-producto {
+    display: inline-block;
+    transition: transform .5s ease, box-shadow .3s ease;
+    transform-style: preserve-3d;
+    border-radius: 12px;
+    }
+    .link-producto img {
+    display: block;
+    border-radius: 12px;
+    transition: transform .5s ease;
+    }
+
+    .contenedor-2:hover .link-producto,
+    .contenedor-2:focus-within .link-producto {
+    transform: rotateY(20deg);
+    box-shadow: 0 10px 24px rgba(0,0,0,.12);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+.productos{
+    grid-template-columns: 1fr; 
+    justify-items: center;
+}
+
+.productos img{
+    width: min(90vw, 480px);
+    height: auto;
+}
+
+.productos-carrito{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.contenedor-3{
+    width: 90vw;
+    margin: 1rem auto;
+}
+.contenedor-3 img{
+    max-width: 100%;
+    height: auto;
+    padding: 0; 
+}
+
+.contenedor-3 p{
+    width: 100%;
+    text-align: justify;
+    text-align-last: center;
+    margin-top: .5rem;
+}
+
+.titulo-producto{ text-align: center; }
+}

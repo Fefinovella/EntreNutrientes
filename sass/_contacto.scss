@@ -1,0 +1,95 @@
+@use 'variables' as *;
+
+.titulo-subtitulo {
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 70vw;
+    margin: 2rem auto;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.titulo-subtitulo p {
+    font-size: large;
+    font-style: oblique;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 5vh auto 2vh auto;
+}
+
+form.contacto input, form.contacto textarea {
+    width: 100%;
+    padding: 1vh 1vw;
+    border: 2px solid $color-borde-input;
+    border-radius: 0.5vw;
+}
+
+form.contacto .formulario {
+    display: flex;
+    gap: 2vw;
+}
+
+form.contacto .formulario input {
+    width: 50%;
+}
+
+.ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    padding: 1rem 2rem 5rem 2rem;
+    flex-wrap: wrap;
+}
+
+.mapa iframe {
+    width: 40vw;
+    height: 40vh;
+    border: none;
+    border-radius: 1vw;
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+}
+
+.informacion {
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+form.contacto{
+    width: 80vw;
+    gap: 0.5rem;
+}
+
+form.contacto .formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+form.contacto .formulario input[type="email"],
+form.contacto .formulario input[type="tel"]{
+    width: 100% !important;
+    max-width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+form.contacto br{ display: none; }
+
+.mapa iframe {
+    width: 80vw;
+    height: 40vh;
+}
+
+.titulo-subtitulo {
+    margin: 1rem auto;
+}
+
+}

@@ -1,0 +1,44 @@
+$color-principal: rgb(73, 83, 109);
+$color-secundario: rgb(236, 236, 236);
+$color-terceario: rgb(214, 212, 238);
+$color-borde-input: rgb(155, 159, 170);
+$color-titulo: rgb(33, 35, 41);
+$color-boton-hover: #f1d97e;
+$color-boton-bg: palegoldenrod;
+$nav-h-desktop: 60px;
+$nav-h-mobile: 60px;
+
+
+.titulo-seccion {
+    font-weight: bold;
+    font-size: 22px;
+    color: $color-principal;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+.subtitulo {
+    font-weight: bold;
+    font-size: 22px;
+    color: $color-principal;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#recetarios.subtitulo {
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem auto;
+}
+
+.titulo-producto {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 22px;
+    color: $color-principal;
+}

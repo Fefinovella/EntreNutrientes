@@ -1,0 +1,82 @@
+@use 'variables' as *;
+
+.testimonios {
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 70vw;
+    margin: 2rem auto;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.testimonios p {
+    font-size: large;
+    font-style: oblique;
+}
+
+.personas {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.personas > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.personas p {
+    width: 30vw;
+    display: flex;
+    text-align: justify;
+    text-align-last: center;
+    padding: 1rem;
+}
+
+.personas img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: 0.3vw solid $color-principal;
+    box-shadow: 0px 1px 5px;
+    background-color: white;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+.personas{
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.personas > div{
+    width: 100%;
+    text-align: center;
+}
+
+.personas img{
+    width: 45vw;
+    height: 45vw;
+    border-radius: 50%;
+}
+
+.personas p{
+    width: 100%;
+    max-width: 80vw;
+    text-align: center;
+}
+
+.subtitulo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+}

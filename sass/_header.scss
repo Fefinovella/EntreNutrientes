@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+html, body {
+    padding: 0px;
+    border: 0px;
+    font-family: 'Segoe UI';
+}
+
+.fw-bold {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    color: $color-principal;
+}
+
+.navbar {
+background-color: $color-terceario;
+}
+
+body { padding-top: $nav-h-desktop; }
+@media (max-width: 650px) {
+    body { padding-top: $nav-h-mobile; }
+}
+
+[id] { scroll-margin-top: $nav-h-desktop; }
+@media (max-width: 650px) {
+    [id] { scroll-margin-top: $nav-h-mobile; }
+}
